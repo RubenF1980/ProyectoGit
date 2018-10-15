@@ -14,6 +14,19 @@ public class Contacto {
     private String telefono; 
     private String alias;
     private String apellidos;
+    private static int numeroDeContactos=0;//estatico se comparte con todos los objetos de la clase.Si cambio en uno cambia en todos.
+
+    
+    
+    public static int getNumeroDeContactos() {
+        return numeroDeContactos;
+    }
+
+    public static void setNumeroDeContactos(int numeroDeContactos) {
+        Contacto.numeroDeContactos = numeroDeContactos;
+    }
+    
+    
 
     public String getApellidos() {
         return apellidos;
@@ -23,6 +36,8 @@ public class Contacto {
         this.apellidos = apellidos;
     }
 
+    
+    
     public String getAlias() {
         return alias;
     }
@@ -40,6 +55,7 @@ public class Contacto {
         this.nombre = nombre;
     }
 
+    
     public String getTelefono() {
         return telefono;
     }
@@ -48,6 +64,7 @@ public class Contacto {
         this.telefono = telefono;
     }
 
+    //constructor
     public Contacto(String nombre, String telefono) {
         this.nombre = nombre;
         this.telefono = telefono;
